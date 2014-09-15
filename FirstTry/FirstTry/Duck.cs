@@ -8,6 +8,7 @@ namespace FirstTry
         {
             var littleDuck = new RubberDuck();
             var woodenDuck = new WoodenDuck();
+            var simleDuck = new SimpleDuck();
 
             Console.WriteLine("1st duck");
             littleDuck.Fly();
@@ -21,6 +22,13 @@ namespace FirstTry
             woodenDuck.Quack();
             woodenDuck.Swim();
 
+            Console.WriteLine("\n");
+
+            Console.WriteLine("3rd duck");
+            simleDuck.PerformFly();
+            simleDuck.PerformQuack();
+            simleDuck.Swim();
+
             Console.ReadKey();
         }
     }
@@ -28,6 +36,18 @@ namespace FirstTry
     public abstract class Duck
     {
         public abstract void Swim();
+
+        public void PerformFly()
+        {
+            FlyBehavior flyBehavior = new FlyBehavior();
+            flyBehavior.Fly();
+        }
+
+        public void PerformQuack()
+        {
+            QuackBehavior quackBehavior = new QuackBehavior();
+            quackBehavior.Quack();
+        }
     }
 
     public class FlyBehavior
@@ -115,6 +135,14 @@ namespace FirstTry
         {
             var tryQuack = new MuteQuack();
             tryQuack.Quack();
+        }
+    }
+
+    public class SimpleDuck : Duck
+    {
+        public override void Swim()
+        {
+            Console.WriteLine("I'm swimming!");
         }
     }
 }
