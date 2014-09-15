@@ -6,20 +6,20 @@ namespace FirstTry
     {
         static void Main()
         {
-            var littleDuck = new RubberDuck();
-            var woodenDuck = new WoodenDuck();
-            var simleDuck = new SimpleDuck();
+            Duck littleDuck = new RubberDuck();
+            Duck woodenDuck = new WoodenDuck();
+            Duck simleDuck = new SimpleDuck();
 
             Console.WriteLine("1st duck");
-            littleDuck.Fly();
-            littleDuck.Quack();
+            littleDuck.PerformFly();
+            littleDuck.PerformQuack();
             littleDuck.Swim();
 
             Console.WriteLine("\n");
 
             Console.WriteLine("2nd duck");
-            woodenDuck.Fly();
-            woodenDuck.Quack();
+            woodenDuck.PerformFly();
+            woodenDuck.PerformQuack();
             woodenDuck.Swim();
 
             Console.WriteLine("\n");
@@ -37,62 +37,57 @@ namespace FirstTry
     {
         public abstract void Swim();
 
+        public IFlyBehavior FlyBehavior;
+        public IQuackBehavior QuackBehavior;
+
         public void PerformFly()
         {
-            FlyBehavior flyBehavior = new FlyBehavior();
-            flyBehavior.Fly();
+            FlyBehavior.Fly();
         }
 
         public void PerformQuack()
         {
-            QuackBehavior quackBehavior = new QuackBehavior();
-            quackBehavior.Quack();
+            QuackBehavior.Quack();
         }
     }
 
-    public class FlyBehavior
+    public interface IFlyBehavior
     {
-        public virtual void Fly()
-        {
-            Console.WriteLine("I'm flying");
-        }
+        void Fly();
     }
 
-    public class FlyWithWings : FlyBehavior
+    public class FlyWithWings : IFlyBehavior
     {
-        public override void Fly()
+        public void Fly()
         {
             Console.WriteLine("With wings!");
         }
     }
 
-    public class FlyWithOutWings : FlyBehavior
+    public class FlyWithOutWings : IFlyBehavior
     {
-        public override void Fly()
+        public void Fly()
         {
             Console.WriteLine("I can't fly!");
         }
     }
 
-    public class QuackBehavior
+    public interface IQuackBehavior
     {
-        public virtual void Quack()
-        {
-            Console.WriteLine("I'm quacking");
-        }
+        void Quack();
     }
 
-    public class MuteQuack : QuackBehavior
+    public class MuteQuack : IQuackBehavior
     {
-        public override void Quack()
+        public void Quack()
         {
             Console.WriteLine("....");
         }
     }
 
-    public class Squeack : QuackBehavior
+    public class Squeack : IQuackBehavior
     {
-        public override void Quack()
+        public void Quack()
         {
             Console.WriteLine("Pew! Pew! Pew!!!");
         }
@@ -105,16 +100,10 @@ namespace FirstTry
             Console.WriteLine("I'm swimming");
         }
 
-        public void Fly()
+        public RubberDuck()
         {
-            var tryFly = new FlyWithOutWings();
-            tryFly.Fly();
-        }
-
-        public void Quack()
-        {
-            var tryQuack = new Squeack();
-            tryQuack.Quack();
+            QuackBehavior = new Squeack();
+            FlyBehavior = new FlyWithOutWings();
         }
     }
 
@@ -125,16 +114,10 @@ namespace FirstTry
             Console.WriteLine("I'm swimming");
         }
 
-        public void Fly()
+        public WoodenDuck()
         {
-            var tryFly = new FlyWithOutWings();
-            tryFly.Fly();
-        }
-
-        public void Quack()
-        {
-            var tryQuack = new MuteQuack();
-            tryQuack.Quack();
+            QuackBehavior = new MuteQuack();
+            FlyBehavior = new FlyWithOutWings();
         }
     }
 
@@ -143,6 +126,12 @@ namespace FirstTry
         public override void Swim()
         {
             Console.WriteLine("I'm swimming!");
+        }
+
+        public SimpleDuck()
+        {
+            QuackBehavior = new Squeack();
+            FlyBehavior = new FlyWithWings();
         }
     }
 }
