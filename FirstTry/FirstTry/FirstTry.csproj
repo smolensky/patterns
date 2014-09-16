@@ -44,9 +44,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="strategyPattern\Duck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="strategyPattern\FakeDuck.cs" />
+    <Compile Include="strategyPattern\FlyWithOutWings.cs" />
+    <Compile Include="strategyPattern\FlyWithWings.cs" />
+    <Compile Include="strategyPattern\IFlyBehavior.cs" />
+    <Compile Include="strategyPattern\IQuackBehavior.cs" />
+    <Compile Include="strategyPattern\MuteQuack.cs" />
+    <Compile Include="strategyPattern\RubberDuck.cs" />
+    <Compile Include="strategyPattern\SimpleDuck.cs" />
+    <Compile Include="strategyPattern\Squeack.cs" />
+    <Compile Include="strategyPattern\WoodenDuck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="observerPattern\" />
