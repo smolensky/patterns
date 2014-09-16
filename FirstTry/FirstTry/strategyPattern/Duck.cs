@@ -1,38 +1,7 @@
 ﻿using System;
 
-namespace FirstTry
+namespace FirstTry.strategyPattern
 {
-    class Programm
-    {
-        static void Main()
-        {
-            Duck littleDuck = new RubberDuck();
-            Duck woodenDuck = new WoodenDuck();
-            Duck simleDuck = new SimpleDuck();
-
-            Console.WriteLine("1st duck");
-            littleDuck.PerformFly();
-            littleDuck.PerformQuack();
-            littleDuck.Swim();
-
-            Console.WriteLine("\n");
-
-            Console.WriteLine("2nd duck");
-            woodenDuck.PerformFly();
-            woodenDuck.PerformQuack();
-            woodenDuck.Swim();
-
-            Console.WriteLine("\n");
-
-            Console.WriteLine("3rd duck");
-            simleDuck.PerformFly();
-            simleDuck.PerformQuack();
-            simleDuck.Swim();
-
-            Console.ReadKey();
-        }
-    }
-
     public abstract class Duck
     {
         public abstract void Swim();
