@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{18377245-9FFF-48E0-9DF0-E2AC371FEAE3}</ProjectGuid>
+    <ProjectGuid>{BB8A86A2-2420-414B-ACE6-ED37FEA38973}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FirstTry</RootNamespace>
-    <AssemblyName>FirstTry</AssemblyName>
+    <RootNamespace>SecondTry</RootNamespace>
+    <AssemblyName>SecondTry</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,19 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="decoratorPattern\Beverage.cs" />
+    <Compile Include="decoratorPattern\DarkRoast.cs" />
+    <Compile Include="decoratorPattern\Decorator.cs" />
+    <Compile Include="decoratorPattern\Espresso.cs" />
+    <Compile Include="decoratorPattern\Milk.cs" />
+    <Compile Include="decoratorPattern\Whip.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="strategyPattern\Duck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="strategyPattern\FakeDuck.cs" />
-    <Compile Include="strategyPattern\FlyWithOutWings.cs" />
-    <Compile Include="strategyPattern\FlyWithWings.cs" />
-    <Compile Include="strategyPattern\IFlyBehavior.cs" />
-    <Compile Include="strategyPattern\IQuackBehavior.cs" />
-    <Compile Include="strategyPattern\MuteQuack.cs" />
-    <Compile Include="strategyPattern\RubberDuck.cs" />
-    <Compile Include="strategyPattern\SimpleDuck.cs" />
-    <Compile Include="strategyPattern\Squeack.cs" />
-    <Compile Include="strategyPattern\WoodenDuck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
