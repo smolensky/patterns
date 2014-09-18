@@ -32,7 +32,7 @@ namespace ThirdTry
 
         private static void CheckNull()
         {
-            Console.WriteLine(ChocolateBoiler._uniqueInstance == null
+            Console.WriteLine(ChocolateBoiler.UniqueInstance == null
                 ? "You have null here! \n Create an object!"
                 : "You've created an object! \n You have no null anymore!");
         }

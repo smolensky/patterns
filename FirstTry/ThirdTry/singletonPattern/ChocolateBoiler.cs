@@ -4,7 +4,7 @@ namespace ThirdTry.singletonPattern
 {
     class ChocolateBoiler
     {
-        public static ChocolateBoiler _uniqueInstance;
+        public static ChocolateBoiler UniqueInstance;
         private bool _empty;
         private bool _boiled;
 
@@ -17,9 +17,9 @@ namespace ThirdTry.singletonPattern
 
         public static ChocolateBoiler GetInstance()
         {
-            if (_uniqueInstance == null)
-                return _uniqueInstance = new ChocolateBoiler();
-            return _uniqueInstance;
+            if (UniqueInstance == null)
+                return UniqueInstance = new ChocolateBoiler();
+            return UniqueInstance;
         }
 
         public void Fill()
