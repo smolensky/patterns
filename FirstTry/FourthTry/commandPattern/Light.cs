@@ -4,14 +4,14 @@ namespace FourthTry.commandPattern
 {
     public class Light
     {
-        public void On()
+        public object On()
         {
-            Console.WriteLine("Light was turned on");
+            return "Light was turned on";
         }
 
-        public void Off()
+        public object Off()
         {
-            Console.WriteLine("Light was turned off");
+            return "Light was turned off";
         }
     }
 }

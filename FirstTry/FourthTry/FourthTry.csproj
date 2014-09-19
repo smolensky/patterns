@@ -42,10 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="commandPattern\GarageDoor.cs" />
+    <Compile Include="commandPattern\GarageDoorCloseCommand.cs" />
     <Compile Include="commandPattern\GarageDoorOpenCommand.cs" />
     <Compile Include="commandPattern\ICommand.cs" />
     <Compile Include="commandPattern\Light.cs" />
+    <Compile Include="commandPattern\LightOffCommand.cs" />
     <Compile Include="commandPattern\LightOnCommand.cs" />
+    <Compile Include="commandPattern\NoCommand.cs" />
     <Compile Include="commandPattern\SimpleRemoteControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

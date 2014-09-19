@@ -4,14 +4,14 @@ namespace FourthTry.commandPattern
 {
     public class GarageDoor
     {
-        public void Up()
+        public object Up()
         {
-            Console.WriteLine("Garage door was opened.");
+            return "Garage door was opened.";
         }
 
-        public void Down()
+        public object Down()
         {
-            Console.WriteLine("Garage door was closed.");
+            return "Garage door was closed.";
         }
 
         public void Stop()
