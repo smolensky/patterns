@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="commandPattern\CeilingFan.cs" />
+    <Compile Include="commandPattern\CeilingFanTurnOffCommand.cs" />
+    <Compile Include="commandPattern\CeilingFanTurnOnHighCommand.cs" />
     <Compile Include="commandPattern\GarageDoor.cs" />
     <Compile Include="commandPattern\GarageDoorCloseCommand.cs" />
     <Compile Include="commandPattern\GarageDoorOpenCommand.cs" />
