@@ -28,6 +28,8 @@ namespace FourthTry
             remote.OffButtonWasPressed(0);
             remote.OffButtonWasPressed(1);
 
+            remote.UndoButtonWasPressed();
+
             Console.ReadKey();
         }
     }

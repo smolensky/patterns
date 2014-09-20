@@ -8,5 +8,10 @@ namespace FourthTry.commandPattern
         {
             Console.WriteLine("no");
         }
+
+        public void Undo()
+        {
+            Console.WriteLine("nothing to undo");
+        }
     }
 }
