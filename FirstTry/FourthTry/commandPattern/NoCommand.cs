@@ -1,10 +1,12 @@
-﻿namespace FourthTry.commandPattern
+﻿using System;
+
+namespace FourthTry.commandPattern
 {
     public class NoCommand : ICommand
     {
-        public object Execute()
+        public void Execute()
         {
-            return "no";
+            Console.WriteLine("no");
         }
     }
 }

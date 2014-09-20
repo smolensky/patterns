@@ -9,9 +9,9 @@ namespace FourthTry.commandPattern
             _garageDoor = garageDoor;
         }
 
-        public object Execute()
+        public void Execute()
         {
-            return _garageDoor.Down();
+            _garageDoor.Down();
         }
     }
 }

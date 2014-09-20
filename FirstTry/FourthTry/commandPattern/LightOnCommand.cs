@@ -9,9 +9,9 @@
             _light = light;
         }
 
-        public object Execute()
+        public void Execute()
         {
-           return _light.On();
+           _light.On();
         }
     }
 }

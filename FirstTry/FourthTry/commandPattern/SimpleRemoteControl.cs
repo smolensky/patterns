@@ -26,14 +26,14 @@ namespace FourthTry.commandPattern
 			_offCommands[slot] = offCommand;
 		}
 
-        public object OnButtonWasPressed(int slot)
+        public void OnButtonWasPressed(int slot)
         {
-            return _onCommands[slot].Execute();
+            _onCommands[slot].Execute();
         }
         
-        public object OffButtonWasPressed(int slot)
+        public void OffButtonWasPressed(int slot)
         {
-            return _offCommands[slot].Execute();
+            _offCommands[slot].Execute();
         }
 
         public override string ToString()

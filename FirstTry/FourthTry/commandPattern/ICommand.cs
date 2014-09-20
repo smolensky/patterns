@@ -2,6 +2,6 @@ namespace FourthTry.commandPattern
 {
     public interface ICommand
     {
-        object Execute();
+        void Execute();
     }
 }
