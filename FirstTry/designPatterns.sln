@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commandPattern", "FourthTry
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adapterPattern", "adapterPattern\adapterPattern.csproj", "{EA39EEF1-4FEB-4CEF-A570-D470A9D2CBF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "templateMethodPattern", "templateMethodPattern\templateMethodPattern.csproj", "{ADBF0140-8B14-452E-A5B2-6B0AF4B6B05C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EA39EEF1-4FEB-4CEF-A570-D470A9D2CBF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA39EEF1-4FEB-4CEF-A570-D470A9D2CBF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA39EEF1-4FEB-4CEF-A570-D470A9D2CBF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBF0140-8B14-452E-A5B2-6B0AF4B6B05C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBF0140-8B14-452E-A5B2-6B0AF4B6B05C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBF0140-8B14-452E-A5B2-6B0AF4B6B05C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBF0140-8B14-452E-A5B2-6B0AF4B6B05C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

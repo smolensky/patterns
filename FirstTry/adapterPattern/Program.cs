@@ -13,7 +13,7 @@ namespace adapterPattern
             var duckAdapter = new DuckAdapter(simpleDuck);
             var turkeyAdapter = new TurkeyAdapter(simpleTurkey);
 
-            var duckFacade = new DuckAndTurkeyFacade();
+            var duckFacade = new DuckAndTurkeyFacade(simpleDuck, simpleTurkey);
 
             Console.WriteLine("\nTurkey:");
             TestTurkey(simpleTurkey);
@@ -29,7 +29,7 @@ namespace adapterPattern
 
             Console.WriteLine("\n");
 
-            duckFacade.DoThings();
+            duckFacade.IsWorking();
 
             Console.ReadKey();
         }

@@ -1,17 +1,25 @@
-﻿namespace adapterPattern.adapterPattern
+﻿using System;
+
+namespace adapterPattern.adapterPattern
 {
-    public class DuckAndTurkeyFacade : IDuckFacade
+    public class DuckAndTurkeyFacade
     {
-        public void DoThings()
+        private readonly SimpleDuck _duck;
+        private readonly SimpleTurkey _turkey;
+
+        public DuckAndTurkeyFacade(SimpleDuck duck, SimpleTurkey turkey)
         {
-            var simpleDuck = new SimpleDuck();
-            var simpleTurkey = new SimpleTurkey();
+            _duck = duck;
+            _turkey = turkey;
+        }
 
-            simpleTurkey.Gobble();
-            simpleTurkey.Fly();
+        public void IsWorking()
+        {
+            _duck.Quack();
+            _duck.Fly();
 
-            simpleDuck.Quack();
-            simpleDuck.Fly();
+            _turkey.Gobble();
+            _turkey.Fly();
         }
     }
 }
