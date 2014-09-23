@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adapterPattern\DuckAdapter.cs" />
+    <Compile Include="adapterPattern\DuckAndTurkeyFacade.cs" />
     <Compile Include="adapterPattern\IDuckFacade.cs" />
     <Compile Include="adapterPattern\ITurkey.cs" />
     <Compile Include="adapterPattern\IDuck.cs" />
