@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adapterPattern\DuckAdapter.cs" />
+    <Compile Include="adapterPattern\IDuckFacade.cs" />
     <Compile Include="adapterPattern\ITurkey.cs" />
     <Compile Include="adapterPattern\IDuck.cs" />
     <Compile Include="Program.cs" />
@@ -51,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
